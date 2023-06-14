@@ -1,0 +1,31 @@
+use sakila;
+
+select title, rating from sakila.film;
+
+select title, release_year from sakila.film;
+
+select * from sakila.film
+where title like '%ARMAGEDDON';
+
+select * from sakila.film
+where title like '%APOLLO%';
+
+select * from sakila.film
+where title like '%Apollo';
+
+select * from sakila.film
+where title like '%date%';
+
+select title, length(title) from sakila.film
+order by length(title) desc
+limit 10;
+
+select title, length(title) from sakila.film
+where length(title) = 10
+limit 10;
+
+select count(special_features) from sakila.film
+where special_features like '%behind the scenes%';
+
+select title, release_year from sakila.film
+order by release_year, title;
